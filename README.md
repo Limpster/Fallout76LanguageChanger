@@ -40,9 +40,9 @@ This is relevant since we are checking if the exectuable is running before we re
 `set "Fallout_executable=Project76_GamePass.exe"`
 
 ## Manual approach
-If you don't want to run the batch because it doens't fit your needs, your have plenty of options to change the language settings without clicking through the windows settings, I will give you some ideas:
+If you don't want to run the batch because it doens't fit your needs, your have plenty of methods to change the language settings without clicking through the windows settings, I will give you some ideas:
 #### - REG-File
-  You can create a REG-File which enters the chosen value directly in the registry. Create an empty textfile with an editor of your choice, insert the following code (here: en-GB for english), save it as *.reg file (e.g. english.reg) and doubleclick to make changes to the registry (I added examples to this repo so you can download them straight away)
+  You can create a REG-File which enters the chosen value directly in the registry. Create an empty textfile with an editor of your choice, insert the following code (here: en-GB for english), save it as *.reg file (e.g. english.reg) and doubleclick to make changes to the registry (I added [examples](https://github.com/Limpster/Fallout76LanguageChanger/tree/main/Files) to this repo so you can download them straight away)
 ```
   Windows Registry Editor Version 5.00
 
@@ -64,7 +64,7 @@ If you don't want to run the batch because it doens't fit your needs, your have 
 
 As you can see I am using the latter approach in my Bat-File of this repo.
 
-If you want to read out the current regional language settings from the registry, you can just open regedit and search for the value or do it via a Terminal command (I also provided a bat for this command in the repo):
+If you want to read out the current regional language settings from the registry, you can just open regedit and search for the value or do it via a Terminal command ([I also provided a bat for this command in the repo](https://github.com/Limpster/Fallout76LanguageChanger/tree/main/Files)):
 ```
 @ECHO OFF
 cls
