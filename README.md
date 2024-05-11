@@ -33,9 +33,9 @@ Further options will be explained below.
 
 ### (Optional) How do I use this thing if I added Fallout 76 as non-Steam Game?
 Method 1:<br>
-I assume that you already added the game to Steam via UWPHook.exe, so you have it appear in your Library with a nice Icon and Header. If not: head over to [UWPHook](https://github.com/BrianLima/UWPHook) and follow the instructions.
+I assume that you already added the game to Steam via UWPHook.exe, so you have it appear in your Library with a nice Icon and Header. If not: head over to [UWPHook](https://github.com/BrianLima/UWPHook) and follow the instructions.<br>
 Method 2:<br>
-(If you don't want to add the game with UWPHook) Since we can't add a bat-file as no-steam game, you can also just add any exe (e.g. explorer.exe) as non-steam game and edit it (see Step 7) to point at my bat-file later, following the steps below.
+(If you don't want to add the game with UWPHook) Since we can't add a bat-file as no-steam game, you can also just add any exe (e.g. explorer.exe) as non-steam game and edit it (see Step 7) to point at my bat-file later, following the steps below.<br>
 
 1. Download the bat-file above and save the file where you think it might be a good place to store it :)
 2. open the batfile with a Texteditor of your choice and make the required changes in the configuration inside of the bat-file (configuration explained below)
