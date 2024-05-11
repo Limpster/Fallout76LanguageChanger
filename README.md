@@ -3,7 +3,7 @@
 </p>
 
 # Fallout76LanguageChanger
-A simple and semi-automatic way to change your windows region forth and back, allowing Fallout 76 (and maybe some other GamePass-PC titles) to run in a chosen language.
+A simple and semi-automatic way to change your windows region back and forth, allowing Fallout 76 (and maybe some other GamePass-PC titles) to run in a chosen language.
 This is just a bat-file to change the language, launch the game and revert the changes after ending your game session.
 
 ## Information
