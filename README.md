@@ -2,6 +2,21 @@
    <img src="https://github.com/Limpster/Fallout76LanguageChanger/assets/7376283/62ac5429-a7af-43aa-bd34-63a93290eea8" alt="Language Changer Screenshot"/>
 </p>
 
+- [Fallout76LanguageChanger](#fallout76languagechanger)
+  - [Information](#information)
+  - [Requirements](#requirements)
+  - [How do I use this thing?](#how-do-i-use-this-thing)
+  - [Configuration](#configuration)
+    - [Set the language](#set-the-language)
+    - [Set Fallout 76 executable (usually not needed)](#set-fallout-76-executable-usually-not-needed)
+  - [Manual approach](#manual-approach)
+      - [REG-File](#reg-file)
+      - [Edit the registry via Terminal/Commandline](#edit-the-registry-via-terminalcommandline)
+      - [Edit the registry by hand](#edit-the-registry-by-hand)
+      - [Read current regional settings from registry batch](#read-current-regional-settings-from-registry-batch)
+  - [Troubeshooting](#troubeshooting)
+  - [Credits](#credits)
+
 # Fallout76LanguageChanger
 A simple and semi-automatic way to change your windows region back and forth, allowing Fallout 76 (and maybe some other GamePass-PC titles) to run in a chosen language.
 This is just a batch-file to change the language, launch the game and revert the changes after ending your game session.
