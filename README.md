@@ -14,7 +14,7 @@ I hope this little script helps you to enjoy the game in another language [(also
 You will have the best experience with this language changer if you are using the 
 * Gamepass Version of Fallout 76
 * Windows 11 (will probably work with other/older/newer versions, but has only been tested on Windows 11 23H2 22635.3495 for the time being)
-* [UWPHook](https://github.com/BrianLima/UWPHook) (to launch the game via the bat-file), if you don't want to add the game as non-steam game, just extract UWPHook somewhere and configure the path to the UWPHook.exe in the bat-file (see below))
+* [UWPHook](https://github.com/BrianLima/UWPHook) (to launch the game via the bat-file), if you don't want to add the game as non-steam game, just extract UWPHook somewhere and configure the path to the UWPHook.exe in the bat-file (see below)
 
 If you don't want to use the language changer and just want to change the region a little easier other than clicking through the windows settings, you will find more information below, explaining other -still easy- solutions for this matter.
 
