@@ -39,7 +39,7 @@ The same goes for the Fallout 76 executable, in the unlikely case the name of th
 This is relevant since we are checking if the exectuable is running before we revert the language settings back to default<br>
 `set "Fallout_executable=Project76_GamePass.exe"`
 
-## manual approach
+## Manual approach
 If you don't want to run the batch because it doens't fit your needs, your have plenty of options to change the language settings without clicking through the windows settings, I will give you some ideas:
 #### - REG-File
   You can create a REG-File which enters the chosen value directly in the registry. Create an empty textfile with an editor of your choice, insert the following code (here: en-GB for english), save it as *.reg file (e.g. english.reg) and doubleclick to make changes to the registry (I added examples to this repo so you can download them straight away)
