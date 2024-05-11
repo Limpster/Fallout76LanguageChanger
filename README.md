@@ -10,7 +10,7 @@ Steam-Users and BethesdaLauncher users might not need this language changer as t
 You will have the best experience with this language changer if you are using the 
 * Gamepass Version of Fallout 76
 * Windows 11 (will probably work with other/older/newer versions, but has only been tested on Windows 11 23H2 22635.3495 for the time being)
-* UWPHook (to launch the game via the bat-file)
+* [UWPHook]([url](https://github.com/BrianLima/UWPHook)) (to launch the game via the bat-file)
 
 If you don't want to use the language changer and just want to change the region a little easier other than clicking through the windows settings, you will find more information below, explaining other -still easy- solutions for this matter.
 
