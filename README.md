@@ -19,19 +19,19 @@ Make the required changes in the configuration inside of the bat-file, save your
 
 ## Configuration
 You will find a few settings inside the bat-file which you have to edit, they are all explained (some with examples) in the file and in this readme.
-Set the language you want to play Fallout 76 in, e.g. en-GB, pt-BR, es-ES, pl-PL, de-DE etc. (obviously only languages downloaded and available for your game will work, I tested it with en-GB, pt-BR, es-ES, pl-PL and de-DE)
+Set the language you want to play Fallout 76 in, e.g. en-GB, pt-BR, es-ES, pl-PL, de-DE etc. (obviously only languages downloaded and available for your game will work, I tested it with en-GB, pt-BR, es-ES, pl-PL and de-DE) 
 example for english language: `set "LocaleNew=en-GB"`
 
 Since I am launching the Game with UWPHook through Steam and not trough the regular shortcut or the XBOX/Gamepass App, I have to tell the file, where to find UWPHook.exe to launch Fallout 76.
-Edit this setting to set the path to UWPHook.exe
+Edit this setting to set the path to UWPHook.exe  
 example: `set "path_to_UWPHook.exe=C:/PATH/TO/UWPHook.exe"`
 
 I guess that the AUMID/APPID will remain the same, unless they release some kind of new version for the game, anyhow, here you are able to edit the AUMID/APPID in the unlikely case of a change. UWPHook.exe shows the ID, you can also easily copy it after adding a shortcut to Steam with UWPHook.
-set the UWPHook.exe AUMID/AppID for Fallout 76 (in case the ID will change, you can edit it here)
+set the UWPHook.exe AUMID/AppID for Fallout 76 (in case the ID will change, you can edit it here) 
 `set "AUMID=BethesdaSoftworks.Fallout76-PC_3275kfvn8vcwc!Fallout76"`
 
 The same goes for the Fallout 76 executable, in the unlikely case the name of the executable will change, you can edit it here.
-This is relevant since we are checking if the exectuable is running before we revert the language settings back to default
+This is relevant since we are checking if the exectuable is running before we revert the language settings back to default 
 `set "Fallout_executable=Project76_GamePass.exe"`
 
 ## Troubeshooting
