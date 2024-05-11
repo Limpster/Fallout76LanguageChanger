@@ -7,7 +7,7 @@ This language changer will edit the regional language setting in the Windows reg
 Since Fallout 76 (and maybe other GamepassPC Titles, e.g. Forza 4 seems to have the same "problem") run only in the language set in the regional language settings of Windows, I thought about making it a hasslefree and easy process without clicking trough the Windows regional settings and reverting them manually after each session.<br><br>
 > Steam-Users and BethesdaLauncher users **might** not need this language changer as they can change the language in their respective launchers as far as I know (since I don't own the Steam/Bethesda Launcher Version, I am not able to help users with these launchers)
 
-I hope this little script helps you to enjoy the game in another language ([also, I heard that some quest with a poem was translated incorrectly and thus it's not working propery for other languages than english](https://www.reddit.com/r/fo76/comments/1bq71w7/psa_for_german_language_players_trying_to_solve/)
+I hope this little script helps you to enjoy the game in another language [(also, I heard that some quest with a poem was translated incorrectly and thus it's not working propery for other languages than english)](https://www.reddit.com/r/fo76/comments/1bq71w7/psa_for_german_language_players_trying_to_solve/)
 
 
 ## Requirements
