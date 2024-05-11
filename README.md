@@ -16,7 +16,8 @@ You will have the best experience with this language changer if you are using th
 If you don't want to use the language changer and just want to change the region a little easier other than clicking through the windows settings, you will find more information below, explaining other -still easy- solutions for this matter.
 
 ## How do I use this thing?
-Make the required changes in the configuration inside of the bat-file, save your changes and double click the bat file, that's it!
+Download the bat-file above, make the required changes in the configuration inside of the bat-file, save your changes and double click the bat file, that's it!
+Further options will be explained below.
 
 ## Configuration
 You will find a few settings inside the bat-file which you have to edit, they are all explained (some with examples) in the file and in this readme.
@@ -34,6 +35,40 @@ set the UWPHook.exe AUMID/AppID for Fallout 76 (in case the ID will change, you 
 The same goes for the Fallout 76 executable, in the unlikely case the name of the executable will change, you can edit it here.
 This is relevant since we are checking if the exectuable is running before we revert the language settings back to default<br>
 `set "Fallout_executable=Project76_GamePass.exe"`
+
+## manual approach
+If you don't want to run the batch because it doens't fit your needs, your have plenty of options to change the language settings without clicking through the windows settings, I will give you some ideas:
+* REG-File
+  You can create a REG-File which enters the chosen value directly in the registry. Create an empty textfile with an editor of your choice, insert the following code (here: en-GB for english), save it as *.reg file (e.g. english.reg) and doubleclick to make changes to the registry (I added examples to this repo so you can download them straight away)
+```
+  Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Control Panel\International]
+"LocaleName"="en-GB"
+```
+* edit the registry via Terminal/Commandline
+  open your Terminal/Commandline and type in the follwing code (here: en-GB for english) and press Enter, the changes will be made to the registry right away!
+
+```
+%SystemRoot%\System32\reg.exe add "HKEY_CURRENT_USER\Control Panel\International" /v LocaleName /d en-GB /f
+```
+`%SystemRoot%\System32\reg.exe`executes regedit
+`add` adds the following Keyname, value, string etc.
+`"HKEY_CURRENT_USER\Control Panel\International"` is the keyname
+`/v` is the valuename (here: LocalName)
+`/d` specifies the data for the entry (here: en-GB)
+`/f` adds the registry entry without prompting for confirmation (you can also remove /f)
+
+As you can see I am using the latter approach in my Bat-File of this repo.
+
+If you want to read out the current regional language settings from the registry, you can just open regedit and search for the value or do it via a Terminal command (I also provided a bat for this command in the repo):
+```
+@ECHO OFF
+cls
+ECHO read current regional setting language from registry
+%SystemRoot%\System32\reg.exe query "HKEY_CURRENT_USER\Control Panel\International" /v LocaleName /s
+pause
+```
 
 ## Troubeshooting
 If your default setting didn't get reverted toy your default because you accidently closed the language changer window or your PC crashed you can always reset it by going into your regional settings in Windows and selecting your region or run
