@@ -20,7 +20,7 @@ Make the required changes in the configuration inside of the bat-file, save your
 ## Configuration
 You will find a few settings inside the bat-file which you have to edit, they are all explained (some with examples) in the file and in this readme.
 Set the language you want to play Fallout 76 in, e.g. en-GB, pt-BR, es-ES, pl-PL, de-DE etc. (obviously only languages downloaded and available for your game will work, I tested it with en-GB, pt-BR, es-ES, pl-PL and de-DE)
-example for english language: set "LocaleNew=en-GB"
+example for english language: ´´´set "LocaleNew=en-GB"
 
 Since I am launching the Game with UWPHook through Steam and not trough the regular shortcut or the XBOX/Gamepass App, I have to tell the file, where to find UWPHook.exe to launch Fallout 76.
 Edit this setting to set the path to UWPHook.exe
