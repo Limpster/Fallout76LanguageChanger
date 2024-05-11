@@ -46,10 +46,11 @@ Since we can't add a bat-file as no-steam game, you can also just add any exe (e
 6. chose "Properties"
 7. look for the line "Target", click on "Browse" and search for the bat-file
 8. chose the bat-file
-9. remove the launch options (might not be necessary, seems to work fine with or without)
-10. close the properties window in Steam
-11. you can now run the game from the Steam library or run it from a shortcut (Steam library -> right click the game -> manage -> add desktop shortcut)
-12. you did it, you found the G.E.C.K. and future generations will survive thanks to your contribution to the wasteland
+9. you can leave "start in" empty (seems to work fine with or without content)
+10. remove the launch options (might not be necessary, seems to work fine with or without)
+11. close the properties window in Steam
+12. you can now run the game from the Steam library or run it from a shortcut (Steam library -> right click the game -> manage -> add desktop shortcut)
+13. you did it, you found the G.E.C.K. and future generations will survive thanks to your contribution to the wasteland
 
 
 ### (Optional 2) How do I use this thing if I added Fallout 76 as non-Steam Game with UWPHook?
@@ -67,10 +68,11 @@ Method 2:<br>
 6. chose "Properties"
 7. look for the line "Target", click on "Browse" and search for the bat-file
 8. chose the bat-file
-9. remove the launch options (might not be necessary, seems to work fine with or without)
-10. close the properties window in Steam
-11. you can now run the game from the Steam library or run it from a shortcut (Steam library -> right click the game -> manage -> add desktop shortcut)
-12. you did it, you found the G.E.C.K. and future generations will survive thanks to your contribution to the wasteland
+9. you can leave "start in" empty (seems to work fine with or without content)
+10. remove the launch options (might not be necessary, seems to work fine with or without)
+11. close the properties window in Steam
+12. you can now run the game from the Steam library or run it from a shortcut (Steam library -> right click the game -> manage -> add desktop shortcut)
+13. you did it, you found the G.E.C.K. and future generations will survive thanks to your contribution to the wasteland
 
 ## Configuration
 You will find a few settings inside the bat-file which you have to edit, they are all explained (some with examples) in the file and in this readme (not all settings are in both batchfiles, most of the time you just need to set the desired locale)
