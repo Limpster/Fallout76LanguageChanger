@@ -26,7 +26,7 @@ If you don't want to use the language changer and just want to change the region
    
 Further options will be explained below.
 
-## (Optional) How do I use this thing of I added Fallout 76 as non-Steam Game?
+### (Optional) How do I use this thing of I added Fallout 76 as non-Steam Game?
 0. I assume that you already added the game to Steam via UWPHook.exe, so you have it appear in your Library with a nice Icon and Header. If not: head over to [UWPHook](https://github.com/BrianLima/UWPHook) and follow the instructions
 1. Download the bat-file above and save the file where you think it might be a good place to store it :)
 2. open the batfile with a Texteditor of your choice and make the required changes in the configuration inside of the bat-file (configuration explained below)
