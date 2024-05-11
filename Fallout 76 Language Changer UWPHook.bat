@@ -16,8 +16,11 @@ REM set the language you want to play Fallout 76 in, e.g. en-GB, pt-BR, es-ES, p
 REM obviously only languages downloaded and available for your game will work
 set "LocaleNew=en-GB"
 
-REM path to the Project76_GamePass.exe, required to start the game
-set "Path_to_Fallout76_Gamepass.exe=C:\XboxGames\Fallout 76\Content\Project76_GamePass.exe"
+REM set path to UWPHook.exe
+set "path_to_UWPHook.exe=C:/PATH/TO/UWPHook.exe"
+
+REM set the UWPHook.exe AUMID/AppID for Fallout 76 (in case the ID will change, you can edit it here)
+set "AUMID=BethesdaSoftworks.Fallout76-PC_3275kfvn8vcwc!Fallout76"
 
 REM set the name of the Fallout 76 executable (in the unlikely case the name of the executable will change, you can edit it here)
 REM this is relevant since we are checking if the exectuable is running before we revert the language settings back to default
@@ -70,7 +73,7 @@ ECHO Language changed to %LocaleNew%
 
 REM run Fallout 76 from Gamepass/UWP App with UWPHook.exe (configure path above)
 ECHO starting Fallout 76
-start "" "%Path_to_Fallout76_Gamepass.exe%"
+start "" "%path_to_UWPHook.exe%" %AUMID% %Fallout_executable%
 
 REM waiting for termination of Fallout 76 and gamingservicesui with a timeout of 5 seconds
 REM as soon as the service and the Fallout executable are terminated, the language will be reverted to system default
