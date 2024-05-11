@@ -133,3 +133,7 @@ pause
 ## Troubeshooting
 If your default setting didn't get reverted toy your default because you accidently closed the language changer window or your PC crashed you can always reset it by going into your regional settings in Windows and selecting your region or run
 `"%SystemRoot%\System32\reg.exe add "HKEY_CURRENT_USER\Control Panel\International" /v LocaleName /d %LocaleName% /f"` (where %LocaleName% has to be replaced by your locale, e.g. de-DE) in your Terminal/Run-Command/Commandline.
+
+## Credits
+Thanks to all the brave redditors, microsoft answers forum users, steamcommunity users and stackoverflow professionals who helped me during my little journey of getting all the necessary information and inspiration for the scripts.
+I shamelessly borrowed the idea for the colored lines in my batch [here](https://stackoverflow.com/a/21666354), thank you [VisualMagic](https://stackoverflow.com/users/2946716/visual-magic)
