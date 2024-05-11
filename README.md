@@ -23,7 +23,7 @@ You will have the best experience with this language changer if you are using
 * Windows 11<br>
   (will probably work with other/older/newer versions, but has only been tested on Windows 11 23H2 22635.3495 for the time being, I don't see a reason why it shouldn't work with other versions)
 * (Optional, actually completely unnecessary and I guess I will remove this method soon) [UWPHook](https://github.com/BrianLima/UWPHook)<br>
-  You can add the game as a non-steam game without UWPHook, actually I don't see a reason to use UWKHook at all; unfortunately my first attempts of adding the game as non-steam game guided me to UWPHook, further testing showed me that it's actually not needed
+  You can add the game as a non-steam game without UWPHook, actually I don't see a reason to use UWPHook at all; unfortunately my first attempts of adding the game as non-steam game guided me to UWPHook, further testing showed me that it's actually not needed
 
   > almost everything this batch does is explained inside the file with comments (REM)
 
