@@ -1,4 +1,4 @@
-![grafik](https://github.com/Limpster/Fallout76LanguageChanger/assets/7376283/62ac5429-a7af-43aa-bd34-63a93290eea8)
+<p align="center">![grafik](https://github.com/Limpster/Fallout76LanguageChanger/assets/7376283/62ac5429-a7af-43aa-bd34-63a93290eea8)</p>
 
 # Fallout76LanguageChanger
 A simple and semi-automatic way to change your windows region forth and back, allowing Fallout 76 (and maybe some other GamePass-PC titles) to run in a chosen language.
