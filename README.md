@@ -17,28 +17,50 @@ I hope this little script helps you to enjoy the game in another language [(also
 
 ## Requirements
 You will have the best experience with this language changer if you are using the 
-* Gamepass Version of Fallout 76
-* Windows 11 (will probably work with other/older/newer versions, but has only been tested on Windows 11 23H2 22635.3495 for the time being)
-* [UWPHook](https://github.com/BrianLima/UWPHook) (to launch the game via the bat-file), if you don't want to add the game as non-steam game, just extract UWPHook somewhere and configure the path to the UWPHook.exe in the bat-file (see below)
+* Gamepass Version of Fallout 76 (I don't know if this thing will be usefull for Steam or Bethesda Launcher)
+* Windows 11 (will probably work with other/older/newer versions, but has only been tested on Windows 11 23H2 22635.3495 for the time being, I don't see a reason why it shouldn't work with other versions)
+* (Optional, not necessary) [UWPHook](https://github.com/BrianLima/UWPHook) (if you don't want to add the game as non-steam game, just extract UWPHook somewhere and configure the path to the UWPHook.exe in the bat-file (see below)
 
-If you don't want to use the language changer and just want to change the region a little easier other than clicking through the windows settings, you will find more information below, explaining other -still easy- solutions for this matter.
+  > almost everything this batch does is explained inside the file with remarks (REM)
+
+If you don't want to use the language changer and just want to change the region a little easier other than clicking through the windows settings, you will find more information below, explaining other -still easy- solutions for this matter. Feel free to edit the Batchfile to your linking and tell me about improvements in the issues tab.
 
 ## How do I use this thing?
-1. Download the bat-file above and save the file where you think it might be a good place to store it :)
-2. open the batfile with a Texteditor of your choice and make the required changes in the configuration inside of the bat-file (configuration explained below)
+1. Download the bat-file "Fallout 76 Language Changer.bat" and save the file where you think it might be a good place to store it :)
+2. open the batfile with a texteditor of your choice and make the required changes in the configuration inside of the bat-file (configuration explained below and to a certain extent inside of the file)
+   > in most cases you just have to edit the desired language, the rest should work out of the box
 3. save your changes in your bat-file
 4. double click the bat file, and you did it! You found the G.E.C.K. and future generations will survive thanks to your contribution to the wasteland
    
 Further options will be explained below.
 
-### (Optional) How do I use this thing if I added Fallout 76 as non-Steam Game?
+### (Optional 1) How do I use this thing if I added Fallout 76 as non-Steam Game without UWPHook?
+Since we can't add a bat-file as no-steam game, you can also just add any exe (e.g. explorer.exe) as non-steam game and edit it (see Step 7) to point to my bat-file later, following the steps below.<br>
+
+1. Download the bat-file "Fallout 76 Language Changer.bat" and save the file where you think it might be a good place to store it :)
+2. open the batfile with a Texteditor of your choice and make the required changes in the configuration inside of the bat-file (configuration explained below and to a certain extent inside of the file)
+   > in most cases you just have to edit the desired language, the rest should work out of the box
+3. save your changes in the bat-file
+4. open your Steam library
+5. right click on your Fallout 76 non-Steam Shortcut (or the exe you added as dummy)
+6. chose "Properties"
+7. look for the line "Target", click on "Browse" and search for the bat-file
+8. chose the bat-file
+9. remove the launch options (might not be necessary, seems to work fine with or without)
+10. close the properties window in Steam
+11. you can now run the game from the Steam library or run it from a shortcut (Steam library -> right click the game -> manage -> add desktop shortcut)
+12. you did it, you found the G.E.C.K. and future generations will survive thanks to your contribution to the wasteland
+
+
+### (Optional 2) How do I use this thing if I added Fallout 76 as non-Steam Game with UWPHook?
+Adding a Gamepassgame as a non-steam game is also possible with UWPHook, additionaly it adds an Icon, Logo and a Header to your library (so you dont have to do it by hand).
 Method 1:<br>
 I assume that you already added the game to Steam via UWPHook.exe, so you have it appear in your Library with a nice Icon and Header. If not: head over to [UWPHook](https://github.com/BrianLima/UWPHook) and follow the instructions.<br>
 Method 2:<br>
 (If you don't want to add the game with UWPHook) Since we can't add a bat-file as no-steam game, you can also just add any exe (e.g. explorer.exe) as non-steam game and edit it (see Step 7) to point at my bat-file later, following the steps below.<br>
 
-1. Download the bat-file above and save the file where you think it might be a good place to store it :)
-2. open the batfile with a Texteditor of your choice and make the required changes in the configuration inside of the bat-file (configuration explained below)
+1. Download the bat-file "Fallout 76 Language Changer UWPHook.bat" and save the file where you think it might be a good place to store it :)
+2. open the batfile with a Texteditor of your choice and make the required changes in the configuration inside of the bat-file (configuration explained below and to a certain extent inside of the file)
 3. save your changes in the bat-file
 4. open your Steam library
 5. right click on your Fallout 76 non-Steam Shortcut (or the exe you added as dummy)
@@ -51,18 +73,23 @@ Method 2:<br>
 12. you did it, you found the G.E.C.K. and future generations will survive thanks to your contribution to the wasteland
 
 ## Configuration
-You will find a few settings inside the bat-file which you have to edit, they are all explained (some with examples) in the file and in this readme.
+You will find a few settings inside the bat-file which you have to edit, they are all explained (some with examples) in the file and in this readme (not all settings are in both batchfiles, most of the time you just need to set the desired locale)
+
+Both Batch files (Fallout 76 Language Changer.bat/Fallout 76 Language Changer UWPHook.bat):
 Set the language you want to play Fallout 76 in, e.g. en-GB, pt-BR, es-ES, pl-PL, de-DE etc. (obviously only languages downloaded and available for your game will work, I tested it with en-GB, pt-BR, es-ES, pl-PL and de-DE)
 <br>example for english language: `set "LocaleNew=en-GB"`
 
-Since I am launching the Game with UWPHook through Steam and not trough the regular shortcut or the XBOX/Gamepass App, I have to tell the file, where to find UWPHook.exe to launch Fallout 76.
+Fallout 76 Language Changer UWPHook.bat
+If you are launching the Game with UWPHook through Steam and not trough the regular shortcut or the XBOX/Gamepass App, we have to tell the file, where to find UWPHook.exe to launch Fallout 76.
 Edit this setting to set the path to UWPHook.exe<br>
 example: `set "path_to_UWPHook.exe=C:/PATH/TO/UWPHook.exe"`
 
+Fallout 76 Language Changer UWPHook.bat
 I guess that the AUMID/APPID will remain the same, unless they release some kind of new version for the game, anyhow, here you are able to edit the AUMID/APPID in the unlikely case of a change. UWPHook.exe shows the ID, you can also easily copy it after adding a shortcut to Steam with UWPHook.
 set the UWPHook.exe AUMID/AppID for Fallout 76 (in case the ID will change, you can edit it here)<br>
 `set "AUMID=BethesdaSoftworks.Fallout76-PC_3275kfvn8vcwc!Fallout76"`
 
+Both Batch files (Fallout 76 Language Changer.bat/Fallout 76 Language Changer UWPHook.bat):
 The same goes for the Fallout 76 executable, in the unlikely case the name of the executable will change, you can edit it here.
 This is relevant since we are checking if the exectuable is running before we revert the language settings back to default<br>
 `set "Fallout_executable=Project76_GamePass.exe"`
