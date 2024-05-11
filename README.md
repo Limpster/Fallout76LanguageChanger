@@ -22,11 +22,11 @@ If you don't want to use the language changer and just want to change the region
 1. Download the bat-file above and save the file where you think it might be a good place to store it :)
 2. open the batfile with a Texteditor of your choice and make the required changes in the configuration inside of the bat-file (configuration explained below)
 3. save your changes in your bat-file
-4. double click the bat file, that's it!
+4. double click the bat file, and you did it! You found the G.E.C.K. and future generations will survive thanks to your contribution to the wasteland
    
 Further options will be explained below.
 
-### (Optional) How do I use this thing of I added Fallout 76 as non-Steam Game?
+### (Optional) How do I use this thing if I added Fallout 76 as non-Steam Game?
 Method 1:
 I assume that you already added the game to Steam via UWPHook.exe, so you have it appear in your Library with a nice Icon and Header. If not: head over to [UWPHook](https://github.com/BrianLima/UWPHook) and follow the instructions.
 Method 2:
@@ -36,12 +36,14 @@ Method 2:
 2. open the batfile with a Texteditor of your choice and make the required changes in the configuration inside of the bat-file (configuration explained below)
 3. save your changes in the bat-file
 4. open your Steam library
-5. right click on your Fallout 76 non-Steam Shortcut
+5. right click on your Fallout 76 non-Steam Shortcut (or the exe you added as dummy)
 6. chose "Properties"
 7. look for the line "Target", click on "Browse" and search for the bat-file
 8. chose the bat-file
-9. close the properties window in Steam
-10. you can now run the game from the Steam library
+9. remove the launch options (might not be necessary, seems to work fine with or without)
+10. close the properties window in Steam
+11. you can now run the game from the Steam library or run it from a shortcut (Steam library -> right click the game -> manage -> add desktop shortcut)
+12. you did it, you found the G.E.C.K. and future generations will survive thanks to your contribution to the wasteland
 
 ## Configuration
 You will find a few settings inside the bat-file which you have to edit, they are all explained (some with examples) in the file and in this readme.
