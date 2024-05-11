@@ -76,7 +76,7 @@ If you don't want to run the batch because it doens't fit your needs, your have 
 ```
 %SystemRoot%\System32\reg.exe add "HKEY_CURRENT_USER\Control Panel\International" /v LocaleName /d en-GB /f
 ```
-`%SystemRoot%\System32\reg.exe` executes regedit (you can also just use reg, but in a batch environment i prefer using the whole path)<br>
+`%SystemRoot%\System32\reg.exe` executes regedit (you can also just use reg, but in a batch environment I prefer using the whole path)<br>
 `add` adds the following Keyname, value, string etc.<br>
 `"HKEY_CURRENT_USER\Control Panel\International"` is the keyname<br>
 `/v` is the valuename (here: LocalName)<br>
