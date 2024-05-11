@@ -38,7 +38,7 @@ This is relevant since we are checking if the exectuable is running before we re
 
 ## manual approach
 If you don't want to run the batch because it doens't fit your needs, your have plenty of options to change the language settings without clicking through the windows settings, I will give you some ideas:
-#### REG-File
+#### - REG-File
   You can create a REG-File which enters the chosen value directly in the registry. Create an empty textfile with an editor of your choice, insert the following code (here: en-GB for english), save it as *.reg file (e.g. english.reg) and doubleclick to make changes to the registry (I added examples to this repo so you can download them straight away)
 ```
   Windows Registry Editor Version 5.00
@@ -46,13 +46,13 @@ If you don't want to run the batch because it doens't fit your needs, your have 
 [HKEY_CURRENT_USER\Control Panel\International]
 "LocaleName"="en-GB"
 ```
-#### edit the registry via Terminal/Commandline
+#### - Edit the registry via Terminal/Commandline
   open your Terminal/Commandline and type in the follwing code (here: en-GB for english) and press Enter, the changes will be made to the registry right away!
 
 ```
 %SystemRoot%\System32\reg.exe add "HKEY_CURRENT_USER\Control Panel\International" /v LocaleName /d en-GB /f
 ```
-`%SystemRoot%\System32\reg.exe`executes regedit<br>
+`%SystemRoot%\System32\reg.exe` executes regedit (you can also just use reg, but in a batch environment i prefer using the whole path)<br>
 `add` adds the following Keyname, value, string etc.<br>
 `"HKEY_CURRENT_USER\Control Panel\International"` is the keyname<br>
 `/v` is the valuename (here: LocalName)<br>
