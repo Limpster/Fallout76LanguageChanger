@@ -19,14 +19,14 @@ I hope this little script helps you to enjoy the game in another language [(also
 You will have the best experience with this language changer if you are using the 
 * Gamepass Version of Fallout 76 (I don't know if this thing will be usefull for Steam or Bethesda Launcher)
 * Windows 11 (will probably work with other/older/newer versions, but has only been tested on Windows 11 23H2 22635.3495 for the time being, I don't see a reason why it shouldn't work with other versions)
-* (Optional, not necessary) [UWPHook](https://github.com/BrianLima/UWPHook) (if you don't want to add the game as non-steam game, just extract UWPHook somewhere and configure the path to the UWPHook.exe in the bat-file (see below)
+* (Optional, actually completely unnecessary and I guess I will remove this method soon) [UWPHook](https://github.com/BrianLima/UWPHook) (if you don't want to add the game as non-steam game, just extract UWPHook somewhere and configure the path to the UWPHook.exe in the bat-file (see below)
 
   > almost everything this batch does is explained inside the file with remarks (REM)
 
 If you don't want to use the language changer and just want to change the region a little easier other than clicking through the windows settings, you will find more information below, explaining other -still easy- solutions for this matter. Feel free to edit the Batchfile to your linking and tell me about improvements in the issues tab.
 
 ## How do I use this thing?
-1. Download the bat-file "Fallout 76 Language Changer.bat" and save the file where you think it might be a good place to store it :)
+1. Download the bat-file "[Fallout 76 Language Changer.bat](https://github.com/Limpster/Fallout76LanguageChanger/blob/main/Fallout%2076%20Language%20Changer.bat)" and save the file where you think it might be a good place to store it :)
 2. open the batfile with a texteditor of your choice and make the required changes in the configuration inside of the bat-file (configuration explained below and to a certain extent inside of the file)
    > in most cases you just have to edit the desired language, the rest should work out of the box
 3. save your changes in your bat-file
@@ -37,7 +37,7 @@ Further options will be explained below.
 ### (Optional 1) How do I use this thing if I added Fallout 76 as non-Steam Game without UWPHook?
 Since we can't add a bat-file as no-steam game, you can also just add any exe (e.g. explorer.exe) as non-steam game and edit it (see Step 7) to point to my bat-file later, following the steps below.<br>
 
-1. Download the bat-file "Fallout 76 Language Changer.bat" and save the file where you think it might be a good place to store it :)
+1. Download the bat-file "[Fallout 76 Language Changer.bat](https://github.com/Limpster/Fallout76LanguageChanger/blob/main/Fallout%2076%20Language%20Changer.bat)" and save the file where you think it might be a good place to store it :)
 2. open the batfile with a Texteditor of your choice and make the required changes in the configuration inside of the bat-file (configuration explained below and to a certain extent inside of the file)
    > in most cases you just have to edit the desired language, the rest should work out of the box
 3. save your changes in the bat-file
@@ -59,7 +59,7 @@ I assume that you already added the game to Steam via UWPHook.exe, so you have i
 Method 2:<br>
 (If you don't want to add the game with UWPHook) Since we can't add a bat-file as no-steam game, you can also just add any exe (e.g. explorer.exe) as non-steam game and edit it (see Step 7) to point at my bat-file later, following the steps below.<br>
 
-1. Download the bat-file "Fallout 76 Language Changer UWPHook.bat" and save the file where you think it might be a good place to store it :)
+1. Download the bat-file "[Fallout 76 Language Changer UWPHook.bat](https://github.com/Limpster/Fallout76LanguageChanger/blob/main/Fallout%2076%20Language%20Changer%20UWPHook.bat)" and save the file where you think it might be a good place to store it :)
 2. open the batfile with a Texteditor of your choice and make the required changes in the configuration inside of the bat-file (configuration explained below and to a certain extent inside of the file)
 3. save your changes in the bat-file
 4. open your Steam library
