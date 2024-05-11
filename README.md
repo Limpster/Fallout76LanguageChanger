@@ -20,7 +20,7 @@ If you don't want to use the language changer and just want to change the region
 
 ## How do I use this thing?
 1. Download the bat-file above and save the file where you think it might be a good place to store it :)
-2. make the required changes in the configuration inside of the bat-file
+2. open the batfile with a Texteditor of your choice and make the required changes in the configuration inside of the bat-file (configuration explained below)
 3. save your changes in your bat-file
 4. double click the bat file, that's it!
    
@@ -29,7 +29,7 @@ Further options will be explained below.
 ## (Optional) How do I use this thing of I added Fallout 76 as non-Steam Game?
 0. I assume that you already added the game to Steam via UWPHook.exe, so you have it appear in your Library with a nice Icon and Header. If not: head over to [UWPHook](https://github.com/BrianLima/UWPHook) and follow the instructions
 1. Download the bat-file above and save the file where you think it might be a good place to store it :)
-2. make the required changes in the configuration inside of the bat-file
+2. open the batfile with a Texteditor of your choice and make the required changes in the configuration inside of the bat-file (configuration explained below)
 3. save your changes in the bat-file
 4. open your Steam library
 5. right click on your Fallout 76 non-Steam Shortcut
