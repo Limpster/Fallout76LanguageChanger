@@ -1,40 +1,41 @@
 @echo off
 REM     - Information
-REM This language changer will edit the regional language setting in the Windows registry to a chosen value without altering
-REM any formatting (date, currency, etc.), system or input language itself and will revert the language string back to default
-REM after your game session has ended.
-REM Since Fallout 76 (and maybe other GamepassPC Titles) run only in the language set in the regional language settings of Windows,
-REM I thought about making it a hasslefree and easy process without clicking trough the
-REM Windows regional settings and reverting them manually after each session.
-REM Steam-Users and BethesdaLauncher users might not need this language changer as they can change the language in their respective Launchers (?)
-
+REM For the most recent information visit: https://github.com/Limpster/Fallout76LanguageChanger
+REM A simple and semi-automatic way to change your windows region back and forth,
+REM allowing Fallout 76 (and maybe some other GamePass-PC titles) to run in a language of choice.
+REM This is just a batch-file to change the language, launch the game and revert the changes after ending your game session.
+REM This script has been tested for the Gamepass/Xbox/MS-Store Version of the game.
+REM Might not be of use for Steam/Bethesdalauncher users.
+REM
 REM     - How do I use this thing?
 REM Make the required changes in the configuration below and double click the bat file, that's it!
-
+REM more in-depth information can be found here: https://github.com/Limpster/Fallout76LanguageChanger
+REM
 REM     - Configuration
 REM set the language you want to play Fallout 76 in, e.g. en-GB, pt-BR, es-ES, pl-PL, de-DE etc.
 REM obviously only languages downloaded and available for your game will work
+REM default: en-GB
 set "LocaleNew=en-GB"
-
+REM
 REM path to the Project76_GamePass.exe, required to start the game
+REM default: C:\XboxGames\Fallout 76\Content\Project76_GamePass.exe
 set "Path_to_Fallout76_Gamepass.exe=C:\XboxGames\Fallout 76\Content\Project76_GamePass.exe"
-
+REM
 REM set the name of the Fallout 76 executable (in the unlikely case the name of the executable will change, you can edit it here)
 REM this is relevant since we are checking if the exectuable is running before we revert the language settings back to default
+REM default: Project76_GamePass.exe
 set "Fallout_executable=Project76_GamePass.exe"
 REM     - End of configuration
-
+REM
 REM     - Troubeshooting
-REM If your default setting didn't get reverted toy your default because
-REM you accidently closed the language changer window or your PC crashed
-REM you can always reset it by going into your regional settings in Windows
-REM and selecting your region or run
-REM %SystemRoot%\System32\reg.exe add "HKEY_CURRENT_USER\Control Panel\International" /v LocaleName /d %LocaleName% /f
-REM (where %LocaleName% has to be replaced by your locale, e.g. de-DE)
-REM in your Terminal/Run-Command/Commandline
-
+REM If your default settings didn't get reverted to your default language because
+REM you accidently closed the language changer window or your PC crashed you can always reset it by
+REM a) changing your regional settings in the corresponding menu in Windows
+REM b) run "%SystemRoot%\System32\reg.exe add "HKEY_CURRENT_USER\Control Panel\International" /v LocaleName /d %LocaleName% /f"
+REM (where %LocaleName% has to be replaced by your locale, e.g. de-DE) in your Terminal/Run-Command/Commandline
+REM c) edit registry by hand (see https://github.com/Limpster/Fallout76LanguageChanger)
+REM
 REM Show the beautiful ASCII-Art Logo
-
 ECHO.
 ECHO     ______      ____  /         __  __________
 ECHO    / ____/___ _/ / /_//  __  __/ /_/__  / ___/
@@ -63,18 +64,20 @@ REM read the current regional setting (language string) from the registry
 for /f "tokens=3" %%i in ('%SystemRoot%\System32\reg.exe query "HKEY_CURRENT_USER\Control Panel\International" /v LocaleName ^| find "LocaleName"') do (
     set "LocaleName=%%i"
 )
+REM print the current language string
 ECHO default/current language string: %LocaleName%
-REM change the region to new locale (configure above)
+REM change the region to new locale (configured above, see "configuration")
 %SystemRoot%\System32\reg.exe add "HKEY_CURRENT_USER\Control Panel\International" /v LocaleName /d %LocaleNew% /f >nul
+REM print the new language string
 ECHO Language changed to %LocaleNew%
-
-REM run Fallout 76 from Gamepass/UWP App with UWPHook.exe (configure path above)
+REM
+REM run Fallout 76 (Gamepass/Xbox/MS-Store Version)
 ECHO starting Fallout 76
 start "" "%Path_to_Fallout76_Gamepass.exe%"
-
+REM
 REM waiting for termination of Fallout 76 and gamingservicesui with a timeout of 5 seconds
-REM as soon as the service and the Fallout executable are terminated, the language will be reverted to system default
-REM and the window will close itself
+REM as soon as the service and the Fallout executable are terminated, the language will be
+REM reverted to system default and the window will close itself
 ECHO GamingservicesUI is running
 :WAIT_FOR_GamingServicesUI
 timeout /t 5 /nobreak >nul
