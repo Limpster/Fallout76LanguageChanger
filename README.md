@@ -112,6 +112,24 @@ Example for english language: `set "LocaleNew=en-GB"`
    
 Your mileage may vary, but these are the languages I found in the "locales" folder of my Fallout 76 game folder:  
 ``` de,en-GB,en-US,es,es-419,fr,it,ja,pl,pt-BR,pt-PT,ru,zh-CN,zhTW ```
+
+ Languages according to Steam:
+|                         | Interface | Full Audio | Subtitles |
+| ----------------------- | --------- | ---------- | --------- |
+| English                 | ✔         | ✔         | ✔         |
+| French                  | ✔         | ✔         | ✔         |
+| Italian                 | ✔         | ✔         | ✔         |
+| German                  | ✔         | ✔         | ✔         |
+| Spanish - Spain         | ✔         | ✔         | ✔         |
+| Japanese                | ✔         | ✔         | ✔         |
+| Korean                  | ✔         |            | ✔         |
+| Polish                  | ✔         |            | ✔         |
+| Traditional Chinese     | ✔         |            | ✔         |
+| Russian                 | ✔         |            | ✔         |
+| Simplified Chinese      | ✔         |            | ✔         |
+| Spanish - Latin America | ✔         |            | ✔         |
+| Portuguese - Brazil     | ✔         |            | ✔         |
+
 </details>
 
 ### <ins>Set Fallout 76 executable (usually not needed)</ins>
