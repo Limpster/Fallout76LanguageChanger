@@ -3,6 +3,7 @@
 </p>
 
 - [Fallout76LanguageChanger](#fallout76languagechanger)
+  - [tl;dr](#tldr)
   - [Information](#information)
   - [Requirements](#requirements)
   - [How do I use this thing?](#how-do-i-use-this-thing)
@@ -18,8 +19,12 @@
   - [Credits](#credits)
 
 # Fallout76LanguageChanger
-A simple and semi-automatic way to change your windows region back and forth, allowing Fallout 76 (and maybe some other GamePass-PC titles) to run in a language of choice.
+A simple way to change your windows region back and forth, allowing Fallout 76 (and maybe some other GamePass-PC titles) to run in a language of choice.
 This is just a batch-file to change the language, launch the game and revert the changes after ending your game session.
+
+## tl;dr
+Download "[Fallout 76 Language Changer.bat](https://github.com/Limpster/Fallout76LanguageChanger/raw/main/Fallout%2076%20Language%20Changer.bat)" (right-click and save) and run it.
+If it doesn't work, come back here and read the instructions.
 
 ## Information
 Got Fallout 76 for Gamepass and I wanted to play it in english, unfortunately there is no setting to change the localization in the game or via a launcher. After some google-fu I always read the same (mostly not working or impractical) solutions/recommendations (changing the whole regional setting for Windows manually which also changes date/time, currency etc., changing the whole system language, changing Gamepass/Store country in your Microsoft account, even using VPN etc.[[<sup>1</sup>]](https://www.reddit.com/r/fo76/comments/xxnhcr/changing_the_language_settings_microsoft_store/), [[<sup>2</sup>]](https://www.reddit.com/r/fo76/comments/q20su1/how_to_change_game_language_fallout_76_gamepass/), [[<sup>3</sup>]](https://answers.microsoft.com/en-us/xbox/forum/all/fallout-76-change-the-language/f5eb011d-92f3-4428-96a6-e4dc0f2f2422)) which sounded a little over the top or wasn't working at all and I couldn't find a simple and easy solution.  
