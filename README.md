@@ -46,7 +46,7 @@ If you don't want to use the language changer and just want to change the region
 
 ## How do I use this thing?
 > If you want to play the game localized in english, you just have to download the bat-file and run it. You don't have to edit anything, it should work out of the box! (default is en-GB)
-1. Download the batch-file "[Fallout 76 Language Changer.bat](https://github.com/Limpster/Fallout76LanguageChanger/blob/main/Fallout%2076%20Language%20Changer.bat)" and save the file in a directory where windows can access it without problems
+1. Download the batch-file "[Fallout 76 Language Changer.bat](https://github.com/Limpster/Fallout76LanguageChanger/raw/main/Fallout%2076%20Language%20Changer.bat)" and save the file in a directory where windows can access it without problems
 2. open the batch-file with a texteditor of your choice and make the required changes in the configuration inside of the batch-file
    (configuration explained below and to a certain extent inside of the file)
 > in most cases you just have to edit the desired language and that's it!
