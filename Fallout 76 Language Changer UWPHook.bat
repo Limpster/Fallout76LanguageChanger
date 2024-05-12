@@ -25,7 +25,7 @@ REM default: BethesdaSoftworks.Fallout76-PC_3275kfvn8vcwc!Fallout76
 set "AUMID=BethesdaSoftworks.Fallout76-PC_3275kfvn8vcwc!Fallout76"
 REM
 REM set the name of the Fallout 76 executable (in the unlikely case the name of the executable will change, you can edit it here)
-REM this is relevant since we are checking if the exectuable is running before we revert the language settings back to default
+REM this is relevant since we are checking if the executable is running before we revert the language settings back to default
 REM default: Project76_GamePass.exe
 set "Fallout_executable=Project76_GamePass.exe"
 REM     - End of configuration
