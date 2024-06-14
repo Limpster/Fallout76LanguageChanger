@@ -208,7 +208,7 @@ c) edit registry by hand (see above)
 (thanks @https://github.com/hersiker for opening the first [issue]([url](https://github.com/Limpster/Fallout76LanguageChanger/issues/1)) asking this specific question)  
 As of now it's not in the scope of this script, because (from my understanding) it's only possible to achieve by modifying the files e.g. renaming the audio files to the corresponding language (maybe it is possible with linking/pointing to the right files and "making the game think it's using the right files" without actually moving/renaming the audio files.  
 There might be a way to temporary "rename" the files with a script so we don't have to copy files/actually rename them. I will see if I can find a way to create a script for this option (it's not on my priority list, but I keep it in mind).  
-> Please note that there are 5 supported audio languages, please check the "[Set the language](#set-the-language)" section for the available languages
+> Please note that there are 6 supported audio languages, please check the "[Set the language](#set-the-language)" section for the available languages
 <details>
    <summary>
       Instructions<br>
