@@ -18,7 +18,6 @@
   - [Troubeshooting](#troubeshooting)
   - [Experimental](#experimental)
       - [Different Text and Audio Language](#different-text-and-audio-language)
-      - [Other Audio/Text combination](#other-audiotext-combination)
   - [Credits](#credits)
 
 # Fallout76LanguageChanger
@@ -205,14 +204,14 @@ c) edit registry by hand (see above)
 ## Experimental
 > [!CAUTION]
 > Experimental, your mileage my vary, make backups!
-#### Different Text and Audio Language
+#### <ins>Different Text and Audio Language</ins>
 (thanks @https://github.com/hersiker for opening the first [issue]([url](https://github.com/Limpster/Fallout76LanguageChanger/issues/1)) asking this specific question)  
 As of now it's not in the scope of this script, because (from my understanding) it's only possible to achieve by modifying the files e.g. renaming the audio files to the corresponding language (maybe it is possible with linking/pointing to the right files and "making the game think it's using the right files" without actually moving/renaming the audio files.  
 There might be a way to temporary "rename" the files with a script so we don't have to copy files/actually rename them. I will see if I can find a way to create a script for this option (it's not on my priority list, but I keep it in mind).  
 > Please note that there are 5 supported audio languages, please check the "[Set the language](#set-the-language)" section for the available languages
 <details>
    <summary>
-      #### <ins>Instructions</ins><br>
+      Instructions<br>
    </summary><br>
 Let's say you want to have english audio but german text, here is a possible solution, a quick test ran fine and I had english audio with german text (please take it with a grain of salt since I didn't look too much into this option, the changes are experimental and I don't know if the follwing files are everything you need to change or if the game will crash in certain situations because one file is missing; don't forget to back up your files if you don't want to download/verify the files again in case something goes wrong or you want to revert the changes).
 
@@ -247,7 +246,7 @@ At the time of writing this instruction you might have to backup/rename 15 files
 And that's it, if you run the game now (without my script! just run it from the launcher/shortcut on your desktop etc.) the game should show the text in your system language (e.g like it would run without any modification) but you should be able to hear english audio.
 This change is permanent, until they add more audio files or the files become replaced from the launcher due to an update or file verification.
 
-#### <ins>Other Audio/Text combination</ins>
+<ins>Other Audio/Text combination</ins>  
 You can also have german audio with english text or other combinations, just rename the corresponding files to the language you want to hear and run the LanguageChanger script to change the text (keep in mind that you have to rename the files to the language you chose with the language changer, e.g. if you use my language changer to change the language to japanese, you also have to rename the audio files to the japanese audio files, you get the idea).
 </details>
 
