@@ -16,6 +16,9 @@
       - [Edit the registry by hand](#edit-the-registry-by-hand)
       - [Read current regional settings from registry batch](#read-current-regional-settings-from-registry-batch)
   - [Troubeshooting](#troubeshooting)
+  - [Experimental](#experimental)
+      - [Different Text and Audio Language](#different-text-and-audio-language)
+      - [Other Audio/Text combination](#other-audiotext-combination)
   - [Credits](#credits)
 
 # Fallout76LanguageChanger
@@ -193,12 +196,60 @@ ECHO read current regional setting language from registry
 %SystemRoot%\System32\reg.exe query "HKEY_CURRENT_USER\Control Panel\International" /v LocaleName /s
 pause
 ```
-
 ## Troubeshooting
 If your default settings didn't get reverted to your default language because you accidently closed the language changer window or your PC crashed you can always reset it by  
 a) changing your regional settings in the corresponding menu in Windows  
 b) run `"%SystemRoot%\System32\reg.exe add "HKEY_CURRENT_USER\Control Panel\International" /v LocaleName /d %LocaleName% /f"` (where %LocaleName% has to be replaced by your locale, e.g. de-DE) in your Terminal/Run-Command/Commandline  
 c) edit registry by hand (see above)
+
+## Experimental
+> [!CAUTION]
+> Experimental, your mileage my vary, make backups!
+#### Different Text and Audio Language
+(thanks @https://github.com/hersiker for opening the first [issue]([url](https://github.com/Limpster/Fallout76LanguageChanger/issues/1)) asking this specific question)  
+As of now it's not in the scope of this script, because (from my understanding) it's only possible to achieve by modifying the files e.g. renaming the audio files to the corresponding language (maybe it is possible with linking/pointing to the right files and "making the game think it's using the right files" without actually moving/renaming the audio files.  
+There might be a way to temporary "rename" the files with a script so we don't have to copy files/actually rename them. I will see if I can find a way to create a script for this option (it's not on my priority list, but I keep it in mind).  
+> Please note that there are 5 supported audio languages, please check the "[Set the language](#set-the-language)" section for the available languages
+<details>
+   <summary>
+      #### <ins>Instructions</ins><br>
+   </summary><br>
+Let's say you want to have english audio but german text, here is a possible solution, a quick test ran fine and I had english audio with german text (please take it with a grain of salt since I didn't look too much into this option, the changes are experimental and I don't know if the follwing files are everything you need to change or if the game will crash in certain situations because one file is missing; don't forget to back up your files if you don't want to download/verify the files again in case something goes wrong or you want to revert the changes).
+
+Example for german text with english audio, if you want to have es/fr/it/ja text, follow the steps with the corresponding language code:
+> Bonus: for this change you usually don't need my script, we are just renaming the english audio files to the system language, the game will think it loads german audio, but we replaced the german audio with the english audio files.
+
+1. Navigate to your game folder and open the "Data" Folder (e.g. C:\XboxGames\Fallout 76\Content\Data)
+2. inside this folder you will see plenty of files, we are especially interested in the "*voices_de.ba2" files ("de"=german, "es"=spanish, "fr"=french, "it"=italian, "ja"=japanese, these are all the supported audio languages)
+3. make a backup of all the "*voices_de.ba2" files (=german audio), e.g. rename them to "_*voices_de.ba2"
+4. make a copy of all the "*voices.ba2" files (=english audio) (you now have two sets of english audio files)
+5. rename all the copies of the english audio files and give them the name of the german audio files e.g. "SeventySix - 00UpdateVoices.ba2" will become "SeventySix - 00UpdateVoices_de.ba2" (you now have 3 sets of audio files: the german audio files backup, the english original files and the english audio files which you renamed to the german audio files)
+At the time of writing this instruction you might have to backup/rename 15 files:
+
+| Original Files                  | Renamed to                           |
+|---------------------------------|--------------------------------------|
+| SeventySix - 00UpdateVoices.ba2 | SeventySix - 00UpdateVoices_de.ba2   |
+| SeventySix - 01UpdateVoices.ba2 | SeventySix -   01UpdateVoices_de.ba2 |
+| SeventySix - 02UpdateVoices.ba2 | SeventySix -   02UpdateVoices_de.ba2 |
+| SeventySix - 03UpdateVoices.ba2 | SeventySix -   03UpdateVoices_de.ba2 |
+| SeventySix - 04UpdateVoices.ba2 | SeventySix -   04UpdateVoices_de.ba2 |
+| SeventySix - 05UpdateVoices.ba2 | SeventySix -   05UpdateVoices_de.ba2 |
+| SeventySix - 06UpdateVoices.ba2 | SeventySix -   06UpdateVoices_de.ba2 |
+| SeventySix - 07UpdateVoices.ba2 | SeventySix -   07UpdateVoices_de.ba2 |
+| SeventySix - 08UpdateVoices.ba2 | SeventySix -   08UpdateVoices_de.ba2 |
+| SeventySix - 09UpdateVoices.ba2 | SeventySix -   09UpdateVoices_de.ba2 |
+| SeventySix - 10UpdateVoices.ba2 | SeventySix -   10UpdateVoices_de.ba2 |
+| SeventySix - 11UpdateVoices.ba2 | SeventySix -   11UpdateVoices_de.ba2 |
+| SeventySix - 12UpdateVoices.ba2 | SeventySix -   12UpdateVoices_de.ba2 |
+| SeventySix - 13UpdateVoices.ba2 | SeventySix -   13UpdateVoices_de.ba2 |
+| SeventySix - Voices.ba2         | SeventySix -   Voices_de.ba2         |
+
+And that's it, if you run the game now (without my script! just run it from the launcher/shortcut on your desktop etc.) the game should show the text in your system language (e.g like it would run without any modification) but you should be able to hear english audio.
+This change is permanent, until they add more audio files or the files become replaced from the launcher due to an update or file verification.
+
+#### <ins>Other Audio/Text combination</ins>
+You can also have german audio with english text or other combinations, just rename the corresponding files to the language you want to hear and run the LanguageChanger script to change the text (keep in mind that you have to rename the files to the language you chose with the language changer, e.g. if you use my language changer to change the language to japanese, you also have to rename the audio files to the japanese audio files, you get the idea).
+</details>
 
 ## Credits
 Thanks to all the brave redditors for your upvotes, microsoft answers forum users <sub>(why does this forum even exist lol)</sub></sub>, steamcommunity users and stackoverflow professionals who helped me during my little journey of getting all the necessary information and inspiration for the scripts.
