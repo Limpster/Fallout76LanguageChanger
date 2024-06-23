@@ -25,6 +25,15 @@ REM set the name of the Fallout 76 executable (in the unlikely case the name of 
 REM this is relevant since we are checking if the executable is running before we revert the language settings back to default
 REM default: Project76_GamePass.exe
 set "Fallout_executable=Project76_GamePass.exe"
+REM
+REM We set the timeout in seconds to check for the executables, sometimes the timeout is too low
+REM (e.g. Fallout doesn't start in time/fast enough and the script will terminate itself before the game
+REM launched) thus we can set a higher timeout here.
+REM The higher the timeout, the longer it takes until the script will close/reset to the default
+REM language after ending your game (you will see the script slighty longer before it closes itself).
+REM Slower machines should increase the timeout by a few seconds.
+REM default: 5
+set "timeout=5"
 REM     - End of configuration
 REM
 REM     - Troubeshooting
@@ -80,14 +89,14 @@ REM as soon as the service and the Fallout executable are terminated, the langua
 REM reverted to system default and the window will close itself
 ECHO GamingservicesUI is running
 :WAIT_FOR_GamingServicesUI
-timeout /t 5 /nobreak >nul
+timeout /t %timeout% /nobreak >nul
 tasklist | find /i "gamingservicesui.exe" >nul
 if %errorlevel% equ 0 (
     goto WAIT_FOR_GamingServicesUI
 )
 ECHO Fallout 76 is running
 :WAIT_FOR_FALLOUT76
-timeout /t 5 /nobreak >nul
+timeout /t %timeout% /nobreak >nul
 tasklist | find /i "%Fallout_executable%" >nul
 if %errorlevel% equ 0 (
     goto WAIT_FOR_FALLOUT76
