@@ -163,7 +163,8 @@ set the UWPHook.exe AUMID/AppID for Fallout 76 (in case the ID will change, you 
 ### <ins>Set timeout (for slower machines)</ins>
 Here we can set the timeout in seconds to check if the executables (gamingservicesui.exe and the Fallout executable) are still running, sometimes the timeout is too low (e.g. Fallout doesn't start in time/fast enough and the script will terminate itself before the game even launched) thus we can set a higher timeout here. The higher the timeout, the longer it takes until the script will close/reset to the default language after ending your game (you will see the script slighty longer before it closes itself). Slower machines should increase the timeout by a few seconds.  
 Default timeout is 5 seconds.  
-Example: `set "timeout=5"`
+Example: `set "timeout=5"`  
+(might be smarter to check for the running applications to a later point instead to rely on a timeout, I might edit the script when I find time and try to improve the method)
 
 ## Manual approach
 If you don't want to run the batch because it doesn't fit your needs, your have plenty of methods to change the language settings without clicking through the windows settings, I will give you some ideas:
