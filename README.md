@@ -10,6 +10,7 @@
   - [Configuration](#configuration)
     - [Set the language](#set-the-language)
     - [Set Fallout 76 executable (usually not needed)](#set-fallout-76-executable-usually-not-needed)
+    - [Set timeout (for slower machines)](#set-timeout-for-slower-machines)
   - [Manual approach](#manual-approach)
       - [REG-File](#reg-file)
       - [Edit the registry via Terminal/Commandline](#edit-the-registry-via-terminalcommandline)
@@ -158,6 +159,11 @@ I guess that the AUMID/APPID will remain the same, unless they release some kind
 set the UWPHook.exe AUMID/AppID for Fallout 76 (in case the ID will change, you can edit it here)<br>
 `set "AUMID=BethesdaSoftworks.Fallout76-PC_3275kfvn8vcwc!Fallout76"`
 </details>
+
+### <ins>Set timeout (for slower machines)</ins>
+Here we can set the timeout in seconds to check if the executables (gamingservicesui.exe and the Fallout executable) are still running, sometimes the timeout is too low (e.g. Fallout doesn't start in time/fast enough and the script will terminate itself before the game even launched) thus we can set a higher timeout here. The higher the timeout, the longer it takes until the script will close/reset to the default language after ending your game (you will see the script slighty longer before it closes itself). Slower machines should increase the timeout by a few seconds.  
+Default timeout is 5 seconds.  
+Example: `set "timeout=5"`
 
 ## Manual approach
 If you don't want to run the batch because it doesn't fit your needs, your have plenty of methods to change the language settings without clicking through the windows settings, I will give you some ideas:
