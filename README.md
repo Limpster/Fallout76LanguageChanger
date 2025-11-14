@@ -81,7 +81,7 @@ Since we can't add a batch-file as non-steam game, you can also just add any exe
 13. you did it, you found the G.E.C.K. and future generations will survive thanks to your contribution to the wasteland
 </details>
 <details>
-<summary>(Optional 2) How do I use this thing if I added Fallout 76 as non-Steam Game with UWPHook?</summary><br>
+<summary>(Optional 2) (OUTDATED!) How do I use this thing if I added Fallout 76 as non-Steam Game with UWPHook?</summary><br>
 Adding a Gamepassgame as a non-steam game is also possible with UWPHook, additionaly it adds an icon, logo and a header to your library (so you dont have to do it by hand).  
 
    Method 1:  
@@ -90,7 +90,7 @@ Adding a Gamepassgame as a non-steam game is also possible with UWPHook, additio
    Method 2:   
    (If you don't want to add the game with UWPHook) Since we can't add a batch-file as non-steam game, you can also just add any exe (e.g. explorer.exe) as non-steam game and edit it (see Step 7) to point at my batch-file later, following the steps below.  
    
-1. Download the batch-file "[Fallout 76 Language Changer UWPHook.bat](https://github.com/Limpster/Fallout76LanguageChanger/raw/main/Fallout%2076%20Language%20Changer%20UWPHook.bat)" (right-click and save) and save the file in a directory where windows can access it without problems
+1. Download the batch-file "[Fallout 76 Language Changer UWPHook.bat](https://github.com/Limpster/Fallout76LanguageChanger/raw/main/Files/Fallout%2076%20Language%20Changer%20UWPHook.bat)" (OUTDATED!) (right-click and save) and save the file in a directory where windows can access it without problems
 2. open the batch-file with a texteditor of your choice and make the required changes in the configuration inside of the batch-file (configuration explained below and to a certain extent inside of the file)
 3. save your changes in the batch-file
 4. open your Steam library
