@@ -42,13 +42,13 @@ I hope this little script helps you to enjoy the game in another language [(also
 ## Requirements
 You will have the best experience with this language changer if you are using 
 * Gamepass Version of Fallout 76  
-  (I don't know if this thing will be usefull for Steam or Bethesda Launcher)
+  (I don't know if this thing will be useful for Steam or Bethesda Launcher)
 * Windows 11/Windows 10 etc.
   (will probably work with other/older/newer versions)
 
   > almost everything this batch does is explained inside the file with comments (REM)
 
-If you don't want to use the language changer but you want to change the region a little easier other than clicking through the windows system settings, you will find more information below, explaining other -still easy- solutions for this matter. Feel free to edit the batchfiles to your liking and tell me about improvements in the issues tab so I can add them and make the files better.
+If you don't want to use the language changer but still want an easier way to change your region without clicking through the Windows system settings, you’ll find more information below explaining other simple solutions for this matter.
 
 ## How do I use this thing?
 > If you want to play the game localized in english, you just have to download the bat-file and run it. You don't have to edit anything, it should work out of the box! (default is en-GB)
@@ -59,7 +59,7 @@ If you don't want to use the language changer but you want to change the region 
 3. save the changes
 4. double click the batch-file and that's it, you did it! You found the G.E.C.K. and future generations will survive thanks to your contribution to the wasteland
    
-Further options will be explained below.
+Additional options are explained below.
 
 <details>
    <summary>(Optional 1) How do I use this thing if I added Fallout 76 as non-Steam Game without UWPHook?</summary><br>
@@ -139,8 +139,8 @@ Your mileage may vary, but these are the languages I found in the "locales" fold
 </details>
 
 ### <ins>Set Fallout 76 executable (usually not needed)</ins>
-The same goes for the Fallout 76 executable, in the unlikely case the name of the executable will change, you can edit it here.
-This is relevant since we are checking if the exectuable is running before we revert the language settings back to default.  
+In the unlikely case that the executable name changes, you can edit it here. This is relevant because the script checks whether the executable is running before reverting the language settings back to default.  
+
 Example: `set "Fallout_executable=Project76_GamePass.exe"`
 <details>
 <summary>Further info regarding the executable</summary>
@@ -159,9 +159,9 @@ set the UWPHook.exe AUMID/AppID for Fallout 76 (in case the ID will change, you 
 </details>
 
 ### <ins>Set timeout (for slower machines)</ins>
-Here we can set the timeout in seconds to check if the executables (gamingservicesui.exe and the Fallout executable) are up and running or if they are still running, sometimes the timeout is too low (e.g. Fallout doesn't start in time/fast enough and the script will terminate itself before the game even launched) thus we can set a higher timeout here. The higher the timeout, the longer it takes until the script will close/reset to the default language after ending your game/before the script closes itself (you will see the script slighty longer before it closes itself). Slower machines should increase the timeout by a few seconds.
+Here we can set the timeout in seconds to check if the executables (gamingservicesui.exe and the Fallout executable) are up and running or if they are still running, sometimes the timeout is too low (e.g. Fallout doesn't start in time/fast enough and the script will terminate itself before the game even launched) thus we can set a higher timeout here. The higher the timeout, the longer it takes until the script will close/reset to the default language after ending your game/before the script closes itself (you will see the script slightly longer before it closes itself). Slower machines should increase the timeout by a few seconds.
 
-timeout_seconds: delay for wait-mode termination checks; closes the script after X amound of seconds in wait mode after game processes are terminated.  
+timeout_seconds: delay for wait-mode termination checks; closes the script after X amount of seconds in wait mode after game processes are terminated.  
   example `set "timeout_seconds=5"`  
   
 max_wait_seconds: max time to wait for both processes to appear in close-mode.  
@@ -173,7 +173,7 @@ grace_seconds: delay after detection in close-mode before reverting LocaleName; 
 (might be smarter to check for the running applications at a later point instead of relying on a timeout in this situation, I might edit the script when I find time and try to improve the method)
 
 ## Manual approach
-If you don't want to run the batch because it doesn't fit your needs, your have plenty of methods to change the language settings without clicking through the windows settings, I will give you some ideas:
+If you don't want to run the batch because it doesn't fit your needs, you have plenty of methods to change the language settings without clicking through the windows settings, I will give you some ideas:
 #### <ins>REG-File</ins>
   You can create a REG-File which enters the chosen value directly in the registry. Create an empty textfile with an editor of your choice, insert the following code (here: en-GB for english), save it as *.reg file (e.g. english.reg) and doubleclick to make changes to the registry (I added [examples](https://github.com/Limpster/Fallout76LanguageChanger/tree/main/Files) to this repo so you can download them straight away)
 ```
@@ -183,12 +183,12 @@ If you don't want to run the batch because it doesn't fit your needs, your have 
 "LocaleName"="en-GB"
 ```
 #### <ins>Edit the registry via Terminal/Commandline</ins>
-  open your Terminal/Commandline and type in the follwing code (here: en-GB for english) and press Enter, the changes will be made to the registry right away!
+  open your Terminal/Commandline and type in the following code (here: en-GB for english) and press Enter, the changes will be made to the registry right away!
 
 ```
 %SystemRoot%\System32\reg.exe add "HKEY_CURRENT_USER\Control Panel\International" /v LocaleName /d en-GB /f
 ```
-`%SystemRoot%\System32\reg.exe` executes regedit (you can also just use reg, but in a batch environment I prefer using the whole path)  
+`%SystemRoot%\System32\reg.exe` executes Regedit (you can also just use reg, but in a batch environment it’s recommended to use the full path) 
 `add` adds the following Keyname, value, string etc.  
 `"HKEY_CURRENT_USER\Control Panel\International"` is the keyname  
 `/v` is the valuename (here: LocalName)  
@@ -222,7 +222,7 @@ c) edit registry by hand (see above)
 
 ## Experimental
 > [!CAUTION]
-> Experimental, your mileage my vary, make backups!
+> Experimental method — your mileage may vary; make backups! 
 #### <ins>Different Text and Audio Language</ins>
 (thanks @https://github.com/hersiker for opening the first [issue]([url](https://github.com/Limpster/Fallout76LanguageChanger/issues/1)) asking this specific question)  
 As of now it's not in the scope of this script, because (from my understanding) it's only possible to achieve by modifying the files e.g. renaming the audio files to the corresponding language (maybe it is possible with linking/pointing to the right files and "making the game think it's using the right files" without actually moving/renaming the audio files.  
@@ -232,10 +232,10 @@ There might be a way to temporary "rename" the files with a script so we don't h
    <summary>
       Instructions<br>
    </summary><br>
-Let's say you want to have english audio but german text, here is a possible solution, a quick test ran fine and I had english audio with german text (please take it with a grain of salt since I didn't look too much into this option, the changes are experimental and I don't know if the follwing files are everything you need to change or if the game will crash in certain situations because one file is missing; don't forget to back up your files if you don't want to download/verify the files again in case something goes wrong or you want to revert the changes).
+Let's say you want to have english audio but german text, here is a possible solution, a quick test ran fine and I had english audio with german text (please take it with a grain of salt since I didn't look too much into this option, the changes are experimental and I don't know if the following files are everything you need to change or if the game will crash in certain situations because one file is missing; don't forget to back up your files if you don't want to download/verify the files again in case something goes wrong or you want to revert the changes).
 
 Example for german text with english audio, if you want to have es/fr/it/ja text, follow the steps with the corresponding language code:
-> Bonus: for this change you usually don't need my script, we are just renaming the english audio files to the system language, the game will think it loads german audio, but we replaced the german audio with the english audio files.
+> Bonus: for this change you usually don't need my script, we are just renaming the english audio files to the system language, the game will think it’s loading German audio, but we actually replaced the German audio with English audio files.
 
 1. Navigate to your game folder and open the "Data" Folder (e.g. C:\XboxGames\Fallout 76\Content\Data)
 2. inside this folder you will see plenty of files, we are especially interested in the "*voices_de.ba2" files ("de"=german, "es"=spanish, "fr"=french, "it"=italian, "ja"=japanese, these are all the supported audio languages)
