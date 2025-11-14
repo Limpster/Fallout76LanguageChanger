@@ -1,6 +1,7 @@
-REM Instruction that switches the console’s active code page to UTF‑8, so Unicode characters (like the star ★) can display correctly
-chcp 65001 >nul
 @echo off
+chcp 65001 >nul
+REM Instruction that switches the console’s active code page to UTF‑8, so Unicode characters (like the star ★) can display correctly
+
 setlocal EnableExtensions EnableDelayedExpansion
 REM Fallout 76 Language Changer (Microsoft Store)
 REM 	About
@@ -83,12 +84,12 @@ ECHO          Language // Changer
 ECHO                   /
 ECHO.
 REM some shameless self-promotion
-ECHO If you enjoy this tool, have a look at my Github and leave a star ★ Thank you!
+ECHO If you enjoy this tool, have a look at my Github and leave a ★ Thank you^^!
 ECHO https://github.com/Limpster/Fallout76LanguageChanger
 for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1) do rem"') do (
   set "DEL=%%a"
 )
-call :colorEcho 0A "Do not close this window while the game is running!"
+call :colorEcho 0A "Do not close this window!"
 ECHO.
 
 REM read the current regional setting (language string) from the registry, used for later
