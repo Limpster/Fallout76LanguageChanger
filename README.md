@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://github.com/Limpster/Fallout76LanguageChanger/assets/7376283/62ac5429-a7af-43aa-bd34-63a93290eea8" alt="Language Changer Screenshot"/>
+   <img width="661" height="336" alt="grafik" src="https://github.com/user-attachments/assets/ebb4a482-021b-4c0e-bbb8-3a0425c53079" alt="Language Changer Screenshot"/>
 </p>
 
 - [Fallout76LanguageChanger](#fallout76languagechanger)
@@ -16,7 +16,7 @@
       - [Edit the registry via Terminal/Commandline](#edit-the-registry-via-terminalcommandline)
       - [Edit the registry by hand](#edit-the-registry-by-hand)
       - [Read current regional settings from registry batch](#read-current-regional-settings-from-registry-batch)
-  - [Troubeshooting](#troubeshooting)
+  - [Troubleshooting](#troubleshooting)
   - [Experimental](#experimental)
       - [Different Text and Audio Language](#different-text-and-audio-language)
   - [Credits](#credits)
@@ -43,14 +43,12 @@ I hope this little script helps you to enjoy the game in another language [(also
 You will have the best experience with this language changer if you are using 
 * Gamepass Version of Fallout 76  
   (I don't know if this thing will be usefull for Steam or Bethesda Launcher)
-* Windows 11  
-  (will probably work with other/older/newer versions, but has only been tested on Windows 11 23H2 22635.3495 for the time being, I don't see a reason why it shouldn't work with other versions)
-* (Optional, actually completely unnecessary and I guess I will remove this method soon) [UWPHook](https://github.com/BrianLima/UWPHook)  
-  You can add the game as a non-steam game without UWPHook, actually I don't see a reason to use UWPHook at all; unfortunately my first attempts of adding the game as non-steam game guided me to UWPHook, further testing showed me that it's actually not needed
+* Windows 11/Windows 10 etc.
+  (will probably work with other/older/newer versions)
 
   > almost everything this batch does is explained inside the file with comments (REM)
 
-If you don't want to use the language changer and just want to change the region a little easier other than clicking through the windows settings, you will find more information below, explaining other -still easy- solutions for this matter. Feel free to edit the batchfiles to your liking and tell me about improvements in the issues tab so I can add them and make the files better.
+If you don't want to use the language changer but you want to change the region a little easier other than clicking through the windows system settings, you will find more information below, explaining other -still easy- solutions for this matter. Feel free to edit the batchfiles to your liking and tell me about improvements in the issues tab so I can add them and make the files better.
 
 ## How do I use this thing?
 > If you want to play the game localized in english, you just have to download the bat-file and run it. You don't have to edit anything, it should work out of the box! (default is en-GB)
@@ -161,9 +159,17 @@ set the UWPHook.exe AUMID/AppID for Fallout 76 (in case the ID will change, you 
 </details>
 
 ### <ins>Set timeout (for slower machines)</ins>
-Here we can set the timeout in seconds to check if the executables (gamingservicesui.exe and the Fallout executable) are still running, sometimes the timeout is too low (e.g. Fallout doesn't start in time/fast enough and the script will terminate itself before the game even launched) thus we can set a higher timeout here. The higher the timeout, the longer it takes until the script will close/reset to the default language after ending your game (you will see the script slighty longer before it closes itself). Slower machines should increase the timeout by a few seconds.  
-Default timeout is 5 seconds.  
-Example: `set "timeout=5"`  
+Here we can set the timeout in seconds to check if the executables (gamingservicesui.exe and the Fallout executable) are up and running or if they are still running, sometimes the timeout is too low (e.g. Fallout doesn't start in time/fast enough and the script will terminate itself before the game even launched) thus we can set a higher timeout here. The higher the timeout, the longer it takes until the script will close/reset to the default language after ending your game/before the script closes itself (you will see the script slighty longer before it closes itself). Slower machines should increase the timeout by a few seconds.
+
+timeout_seconds: delay for wait-mode termination checks; closes the script after X amound of seconds in wait mode after game processes are terminated.  
+  example `set "timeout_seconds=5"`  
+  
+max_wait_seconds: max time to wait for both processes to appear in close-mode.  
+  example `set "max_wait_seconds=120"`  
+  
+grace_seconds: delay after detection in close-mode before reverting LocaleName; reverts language to system default after game process has been found, then closes the script.  
+  example `set "grace_seconds=10"`  
+  
 (might be smarter to check for the running applications at a later point instead of relying on a timeout in this situation, I might edit the script when I find time and try to improve the method)
 
 ## Manual approach
@@ -202,10 +208,16 @@ ECHO read current regional setting language from registry
 %SystemRoot%\System32\reg.exe query "HKEY_CURRENT_USER\Control Panel\International" /v LocaleName /s
 pause
 ```
-## Troubeshooting
+## Troubleshooting
 If your default settings didn't get reverted to your default language because you accidently closed the language changer window or your PC crashed you can always reset it by  
-a) changing your regional settings in the corresponding menu in Windows  
-b) run `"%SystemRoot%\System32\reg.exe add "HKEY_CURRENT_USER\Control Panel\International" /v LocaleName /d %LocaleName% /f"` (where %LocaleName% has to be replaced by your locale, e.g. de-DE) in your Terminal/Run-Command/Commandline  
+a) use the "restore only" feature of this tool:
+1. set `set "restore_only=0"` to `set "restore_only=1"` to activate restore mode
+2. set `set "restore_target="` to your preferred/old system language, e.g. `"restore_target=de-DE"` (for german)
+3. run the script
+4. set `set "restore_only=1"` to `set "restore_only=0"` to deactivate restore mode
+   
+b) changing your regional settings in the corresponding menu in Windows  
+c) run `"%SystemRoot%\System32\reg.exe add "HKEY_CURRENT_USER\Control Panel\International" /v LocaleName /d %LocaleName% /f"` (where %LocaleName% has to be replaced by your locale, e.g. de-DE) in your Terminal/Run-Command/Commandline  
 c) edit registry by hand (see above)
 
 ## Experimental
