@@ -1,5 +1,5 @@
 <p align="center">
-   <img width="661" height="336" alt="grafik" src="https://github.com/user-attachments/assets/ebb4a482-021b-4c0e-bbb8-3a0425c53079" alt="Language Changer Screenshot"/>
+   <img width="673" height="335" alt="grafik" src="https://github.com/user-attachments/assets/a9649da3-d81a-417f-b2a1-67351e6e8b8f" alt="Language Changer Screenshot"/>
 </p>
 
 - [Fallout76LanguageChanger](#fallout76languagechanger)
