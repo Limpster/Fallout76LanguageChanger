@@ -105,6 +105,7 @@ if "%restore_only%"=="1" goto RESTORE_ONLY
 REM Preflight checks and launch
 if not exist "%Path_to_Fallout76_Gamepass.exe%" (
   echo Error: Could not find the game executable at the specified path.
+  pause
   exit /b 2
 )
 
